@@ -4,6 +4,7 @@ module.exports = {
     node: true
   },
   'extends': [
+    'standard'
   ],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
