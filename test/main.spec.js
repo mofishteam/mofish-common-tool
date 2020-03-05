@@ -9,8 +9,8 @@ describe('Main Module Test', () => {
     const mainWithElectron = new Main({ electron })
     it('Type Test', () => {
       mainWithoutElectron.should.be.a('object')
-      mainWithoutElectron.electron.should.be.a('string')
-      mainWithElectron.electron.should.be.a('string')
+      mainWithoutElectron.electron.should.be.a('object')
+      mainWithElectron.electron.should.be.a('object')
     })
   })
 })

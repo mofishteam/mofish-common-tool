@@ -1,9 +1,13 @@
 import '@babel/polyfill'
 import electronObject from 'electron'
+import Client from './ipc/client'
+import Server from './ipc/server'
 
 const ipc = {
-  client: require('./ipc/client'),
-  server: require('./ipc/server')
+  Client,
+  Server,
+  client: Client,
+  server: Server
 }
 
 export default class Tool {
