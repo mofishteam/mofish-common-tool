@@ -1,7 +1,6 @@
 import { describe, it } from 'mocha'
 import Main from '../src/index'
-import { ipcMain, ipcRenderer } from 'electron'
-const ipc = ipcMain || ipcRenderer
+import { ipcRenderer } from 'electron'
 require('chai').should()
 
 describe('IPC Module Test', () => {
@@ -16,10 +15,10 @@ describe('IPC Module Test', () => {
     it('Test Sync Request', () => {
       server1.set('/test-server-sync')
       server1.register()
-      ipc.on('/test-server-sync-reply', (d) => {
+      ipcRenderer.on('/test-server-sync-reply', (d) => {
         console.log(d)
       })
-      ipc.send('/test-server-sync', { data: 'abc' })
+      ipcRenderer.send('/test-server-sync', { data: 'abc' })
     })
   })
 })

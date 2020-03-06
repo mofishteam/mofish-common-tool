@@ -1,5 +1,4 @@
-import { ipcMain, ipcRenderer } from 'electron'
-const ipc = ipcMain || ipcRenderer
+import { ipcMain } from 'electron'
 
 export default class Server {
   constructor () {
@@ -18,9 +17,9 @@ export default class Server {
   }
 
   register () {
-    ipc.on(this.ipcName, async (e, args) => {
+    ipcMain.on(this.ipcName, async (e, args) => {
       console.log(args)
-      e.reply(`${e}-reply`, 123)
+      e.reply(`${e}-reply`, this.handler(args))
       e.returnValue = await this.handler(args)
     })
   }
