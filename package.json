@@ -7,7 +7,7 @@
     "dev": "./node_modules/.bin/nodemon",
     "test:visual": "./node_modules/.bin/browser-sync start --server --files \"testReport/*\"",
     "build": "babel src --presets @babel/env --out-dir dist",
-    "lint": "eslint src test",
+    "lint": "./node_modules/.bin/eslint src test",
     "test": "./node_modules/.bin/electron-mocha test --renderer -t 10000 -s 5000 --bail --require @babel/register --reporter mochawesome --reporter-options reportDir=testReport,reportFilename=report"
   },
   "repository": {
