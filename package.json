@@ -1,6 +1,6 @@
 {
   "name": "mofish-common-tool",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A toolbox for mofish plugins.",
   "main": "index.js",
   "scripts": {
