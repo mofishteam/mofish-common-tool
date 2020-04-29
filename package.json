@@ -1,7 +1,7 @@
 {
   "name": "mofish-common-tool",
-  "version": "0.0.3",
-  "description": "A toolbox for mofish plugins.",
+  "version": "0.0.4",
+  "description": "A Toolbox for mofish plugins.",
   "main": "index.js",
   "scripts": {
     "dev": "./node_modules/.bin/nodemon",
